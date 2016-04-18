@@ -1,0 +1,9 @@
+CPP_STD=c++11
+CPP_FLAGS=-O3 -g3 -std=$(CPP_STD)
+
+COMPILER=g++
+ARCHIVER=ar
+
+!cpp_obj =	|> $(COMPILER) $(CPP_FLAGS) -c %f $(INCLUDES) -o %o	|> %B.o
+!cpp_exec =	|> $(COMPILER) $(CPP_FLAGS) -o %o %f $(LIBS)		|>
+!cpp_stat =	|> $(ARCHIVER) rcs %o %f							|>
