@@ -1,5 +1,1 @@
 include_rules
-
-INCLUDES=-I../include
-
-: foreach *.cpp |> !cpp_obj |>
